@@ -1,5 +1,23 @@
 {
+  "name": "njs-talk",
+  "private": true,
+  "description": "njs-talk",
+  "main": "index.js",
   "devDependencies": {
-    "remarker": "^1.0.3"
-  }
+    "remarker": "^1.2.1"
+  },
+  "scripts": {
+    "start": "remarker",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kt3k/njs-talk.git"
+  },
+  "author": "Yoshiya Hinosawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kt3k/njs-talk/issues"
+  },
+  "homepage": "https://github.com/kt3k/njs-talk#readme"
 }
