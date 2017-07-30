@@ -180,7 +180,7 @@ class: center, middle
 
 ---
 class: center, middle
-# OSS コントリビューションの練習ができるイベントがあります
+# OSS コントリビューションの練習ができるイベントのご紹介
 
 ---
 class: center, middle
@@ -215,14 +215,29 @@ class: center, middle
 
 ---
 class: center, middle
-## PR だけで緑化している人はいない
+# PR counts
 
 ---
 class: center, middle
-## 普段コンスタントにやる何かが必要
+# commit counts
 
 ---
 class: center, middle
+# 大抵の人が
+## PR 投げた数 <<< Commit 数
+
+---
+class: center, middle
+# 大抵の人が
+## 勝手に作ったものを公開している
+
+---
+class: center, middle
+### なんでも良いのでとにかく作りましょう
+
+---
+class: center, middle
+# Write Code Every Day
 <img src="assets/jeresig-write-code.png" width="600" />
 
 ---
@@ -234,9 +249,19 @@ class: center, middle
 - 書いたものは全て GitHub で OSS にする
 
 ---
+# John Resig
+
+- このプラクティスを始める前は**週末**にまとめて書こうとして**失敗し続けた**
+- **毎日**やることで自然なリズム感が生まれるらしい。
 
 ---
 class: center, middle
-# なんか版画検索アプリとか作ってる
+# なんでも良いので毎日何か作ると良いらしいです。
 
 ---
+class: center, middle
+# Write OSS Every Day
+
+---
+class: center, middle
+# ご静聴ありがとうございました。

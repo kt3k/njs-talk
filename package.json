@@ -9,8 +9,11 @@
   },
   "scripts": {
     "start": "remarker",
-    "prs": "xargs -L1 npx gh-pulls --wait 6500 < gh-users.txt",
-    "sort": "sort -n -k2,2 prs.txt -r",
+    "build": "remarker build",
+    "prs": "xargs -L1 npx gh-pulls --wait 6000 < gh-users.txt > prs.txt",
+    "sort-prs": "sort -n -k2,2 prs.txt -r",
+    "commits": "xargs -L1 ./gh-commits.sh < gh-users.txt > commits.txt",
+    "sort-commits": "sort -n -k2,2 commits.txt -r",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,3 +1,4 @@
+dest: docs
 css: |
   body {
     font-family: 'Avenir Next', 'Hiragino Kaku Gothic ProN', 'Meiryo', 'メイリオ', sans-serif;
