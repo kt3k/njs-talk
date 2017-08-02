@@ -1,4 +1,4 @@
-class: center, middle
+class: center, middle, inverse
 # JavaScript OSS Contribution Guide
 
 ひのさわ よしや (@kt3k)
@@ -23,24 +23,28 @@ class: center, middle
 
 ---
 class: center
-# GitHub
+# GitHub 2017
 <img src="assets/gh-2017.png" width="600" />
 ---
 class: center
-# GitHub
+# GitHub 2016
 <img src="assets/gh-2016.png" width="600" />
 ---
 class: center
-# GitHub
+# GitHub 2015
 <img src="assets/gh-2015.png" width="600" />
 ---
 class: center
-# GitHub
+# GitHub 2014
 <img src="assets/gh-2014.png" width="600" />
 ---
 class: center
-# GitHub
+# GitHub 2013
 <img src="assets/gh-2013.png" width="600" />
+---
+class: center, middle, inverse
+# GitHub 中毒
+
 ---
 class: center, middle
 # JavaScript OSS Contribution Guide
@@ -52,7 +56,7 @@ class: center, middle
 - Contribution を増やすには
 
 ---
-class: center, middle
+class: center, middle, inverse
 # チェックポイントその1/5
 
 # Lint
@@ -67,6 +71,9 @@ class: center, middle
   - etc
 
 ---
+# Vuejs
+
+---
 # 例外
 
 ## [Sails](https://github.com/balderdashy/sails/pull/3380)
@@ -79,7 +86,7 @@ class: center, middle
   - -> 文化を尊重してそっとしておく
 
 ---
-class: center, middle
+class: center, middle, inverse
 # チェックポイントその2/5
 
 # テスト
@@ -100,7 +107,7 @@ class: center, middle
   - 基本的には書かない方が良い
 
 ---
-class: center, middle
+class: center, middle, inverse
 # チェックポイントその3/5
 
 # コミットメッセージ
@@ -114,7 +121,7 @@ class: center, middle
 - とりあえず最新10コミット程度眺めてルールを察する
 
 ---
-class: center, middle
+class: center, middle, inverse
 # チェックポイントその4/5
 
 # コミットステータス (CI)
@@ -142,17 +149,20 @@ SS <- コレ
   - 確率的に落ちているぽかったらリトライしてみるのもあり
 
 ---
-class: center, middle
+class: center, middle, inverse
 # チェックポイントその5/5
 
 # メンテナ居ない問題
 
 ---
-# メンテナ居ない問題
+# メンテナが *居ない* 場合
 
 - どうしようもない
 - PR を出すと時間の無駄になる
   - -> ***そっ閉じ*** するしかない
+
+---
+# *居ない* とは
 
 ---
 # メンテナ居ない問題
@@ -161,6 +171,15 @@ class: center, middle
   - sub○tack
   - isa○cs
   - hug○sk
+
+---
+# Eric Raymond - The Cathedral & The Bazaar
+- When you lose interest in a program, your last duty to it is to hand it off to a competent successor.
+- あるプログラムに対する興味を失った時、あなたの最後の義務は適切な後継者に引き渡すこと
+
+---
+class: middle, center, inverse
+# ちゃんと引き継ごう
 
 ---
 # PR チェックポイントまとめ
@@ -183,7 +202,7 @@ class: center, middle
 # OSS コントリビューションの練習ができるイベントのご紹介
 
 ---
-class: center, middle
+class: center, middle, inverse
 # Node 学園祭 2017
 # "Code and Learn" コーナー
 
@@ -259,9 +278,9 @@ class: center, middle
 # なんでも良いので毎日何か作ると良いらしいです。
 
 ---
-class: center, middle
+class: center, middle, inverse
 # Write OSS Every Day
 
 ---
 class: center, middle
-# ご静聴ありがとうございました。
+## ご静聴ありがとうございました

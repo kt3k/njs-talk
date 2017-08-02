@@ -12,6 +12,12 @@ css: |
   }
 
   .remark-slide-content {
+    color: #24292e;
     font-size: 42px;
     padding: 15px 60px;
+  }
+
+  .remark-slide-content.inverse {
+    color: #f3f3f3;
+    background-color: #272822;
   }
