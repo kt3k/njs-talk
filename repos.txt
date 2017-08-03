@@ -1,0 +1,7 @@
+[lint]
+- vue
+[test]
+[status]
+[message]
+[maintainance]
+
