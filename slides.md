@@ -30,7 +30,7 @@ class: center, middle, inverse
 - 2012 -> 2014 **GREE**
 - 2015 -> 2017 フリーランス
   - 主なパートナ: **Recruit**さん **CureApp**さん
-- ↑ ざっくりまとめると全部 Web を作る仕事
+- ↑ ざっくりまとめると全部 Web のお仕事
 
 ---
 class: center
@@ -66,7 +66,6 @@ class: center, middle, inverse
   - 3
   - 4
   - 5
-- Contribution を増やす方法
 
 ---
 # Pull Request (PR)
@@ -86,8 +85,8 @@ class: center, middle, inverse
 - プロジェクトごとに異なるルール設定がある
 - どうやってリントしてるかを読み取る
   - CLI を直接叩くパターン
-  - タスクランナーから起動するパターン (grunt, gulp etc)
-  - etc
+  - タスクランナーから起動するパターン
+  - (例. grunt, gulp etc)
 
 ---
 # 例1 Vuejs (package.json)
@@ -135,7 +134,7 @@ jslint:
 
 - ↑ make jslint で実行できる
 - node 黎明期からあるような PJ で多い
-  - ex. (ちょっと前までの) mocha
+  - ex. mocha
 
 ---
 # もし Lint が壊れていたら
@@ -289,14 +288,17 @@ Date:   Sun Jan 10 00:19:46 2016 +0900
 class: center, middle, inverse
 # チェックポイントその4/5
 
-# デスクリプション
+# 　
+---
+class: center, middle, inverse
+# チェックポイントその4/5
 
+# デスクリプション
 ---
 # デスクリプション
 
 - PR の説明部分
 - コードを直す場合は必ず必要
-- コードの修正にかかった時間以上にデスクリプションにかかってもおかしくない
 
 ---
 # デスクリプション
@@ -374,19 +376,21 @@ class: inverse, middle, center
 
 ---
 class: middle, center, inverse
-# ちゃんと引き継ごう
+# ちゃんと引き継ぎましょう 😇
 
 ---
 # PR チェックポイントまとめ
-1. Lint をチェック
-1. テストを書く
-1. コミットメッセージをチェック
-1. デスクリプションをチェック
-1. メンテナがいるかチェック
+- Lint をチェック
+- テストを書く
+- コミットメッセージをチェック
+- デスクリプションをチェック
+- メンテナがいるかチェック
 
 ---
-# 今日話せなかったチェックポイント
-- CI, コミットステータス, ライセンス etc
+class: middle, center, inverse
+# Good Luck on your next PR!
+
+
 
 ---
 class: center, middle
@@ -408,13 +412,13 @@ class: center, middle, inverse
 ---
 # Code and Learn
 
-- ワークショップ形式で **Node.js (本体)** にみんなでコミットする
+- ワークショップ形式で **Node.js (本体)** にみんなでコミットするイベント
 - コミットするお題はオーガナイザがストックの中から選ばせてくれる
+- その場で Node コミッターが見てくれるので安心 👍
 
 ---
 class: center, middle
-### 去年の Code and Learn で Node.js に
-### コントリビュートできた人の数
+### 去年の Code and Learn で Node.js にコントリビュートできた人の数
 
 # 18人
 
