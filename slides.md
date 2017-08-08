@@ -75,6 +75,10 @@ class: center, middle, inverse
 ---
 class: center, middle, inverse
 # チェックポイントその1/5
+# 　
+---
+class: center, middle, inverse
+# チェックポイントその1/5
 
 # Lint
 
@@ -187,8 +191,8 @@ class: center, middle, inverse
 - テストが通らない場合は、とにかく通すまで頑張る
   - CI がある場合は、CI の設定を参考にする
 - ローカルでどうしても通せない場合はごまかすしかない
-  - テストがきちんとメンテされていない repo は contribute しづらい
-  - テストちゃんとメンテしましょう
+  - 自分の書いたテストだけ通ればよしとする
+  - 他のテストは見なかったことにする
 
 ---
 # どのくらいテストを書くべきか
@@ -204,23 +208,20 @@ class: center, middle, inverse
 ---
 # バグのテストの例
 ## [SCEditor](https://github.com/samclarke/SCEditor/pull/533)
-- ↑ 実装の差分からは何を修正しているか、作者でも絶対に分からない (ぐらい実装が**複雑**)
-- 既存及び追加分のテストが通っているのでマージできた(と思っています)
-
----
-# 機能のテストの例
-## [nvm](https://github.com/creationix/nvm/pull/189)
-
----
-# 機能のテストの例
-## [nvm](https://github.com/creationix/nvm/pull/189)
-- 機能のテストの場合、似たようなテストがない場合もあるためハードルが若干上がる
+- SCEditor はあまりアクティブにはメンテされていない
+- パーサの実装もかなり自由な感じで、作者は実装を覚えていないはず
+- 既存及び追加分のテストが通っていることを持ってマージしたと思われる
 
 ---
 # テスト
-- テストを書くことで非常に細かい粒度で何を修正しているのかを明示できる
+- テストを書くことで非常に細かい粒度で何を修正しているのかをメンテナに対して示すことができる
 - 作者の熱量が下がっていて、もう実装を覚えていない場合でもマージされる可能性が高くなる
 
+---
+class: center, middle, inverse
+# チェックポイントその3/5
+
+# 　　
 ---
 class: center, middle, inverse
 # チェックポイントその3/5
@@ -239,50 +240,39 @@ class: center, middle, inverse
 # Nodejs のルール
 
 - 1行目 subsystem 名でタグ付け (例. stream, fs, doc, test etc)
-- 1行目 50桁以内, 全て小文字, 動詞原形はじまり
+- 1行目 50文字以内, 全て小文字, 動詞原形はじまり
 - 2行目 空行
-- 3行目以降 72桁以内, 対応する issue にリファレンス
+- 3行目以降 72文字以内, 対応する issue にリファレンス
 
 ---
-# Nodejs コミットコメント[例](https://github.com/nodejs/node/commit/8ca322d6134c21901f200b7f00340426548ac543)
+# Nodejs コミットコメント例
 
 ```
-commit 8ca322d6134c21901f200b7f00340426548ac543
-Author: Yoshiya Hinosawa <stibium121@gmail.com>
-Date:   Sat Nov 12 16:26:52 2016 +0900
+test: improve test-stream2-objects.js
 
-    test: improve test-stream2-objects.js
-
-    This commit improves the test cases in
-    test-stream2-objects.js by using assert.strictEqual
-    instead of assert.equal.
+This commit improves the test cases in
+test-stream2-objects.js by using assert.strictEqual
+instead of assert.equal.
 ```
-
 ---
-# ESLint のルール
-
-- 1行目 コミットの種別でタグ付け (例. Fix, New, Docs etc)
-- 1行目 対応する issue を閉じれる場合は Fixes #N で参照, 関連するが解決しない場合は、refs #N で参照
-- 2行目 空行
-- 3行目以降 72桁以内
-
----
-# ESLint コミットコメント[例](https://github.com/eslint/eslint/commit/6390862e02650d1eafe111f11184fd4a7726fbce)
+# Nodejs コミットコメント例
 
 ```
-commit 6390862e02650d1eafe111f11184fd4a7726fbce
-Author: Yoshiya Hinosawa <stibium121@gmail.com>
-Date:   Sun Jan 10 00:19:46 2016 +0900
+test: improve test-stream2-objects.js
 
-    Docs: Fix missing footnote
+This commit improves the test cases in
+test-stream2-objects.js by using assert.strictEqual
+instead of assert.equal.
 ```
+
+- ルールは多いがルールを守ること自体は難しくない
 
 ---
 # コミットメッセージにルールがあるところ
 
 - 大型 PJ に多い
-- 個人でやってるところは滅多にない
-- Changelog の自動生成を採用する (くらい開発が活発な) PJ の場合に必要になってくる
+- **Fix typo** でもこのルールは守らなければならない
+- 知っていれば守ること自体は難しくないが、知らないと嫌な思いをする
 
 ---
 class: center, middle, inverse
@@ -311,8 +301,10 @@ class: center, middle, inverse
 
 ---
 # 例
-
-middleman
+## [SCEditor (前掲)](https://github.com/samclarke/SCEditor/pull/533)
+- なぜバグなのかを詳し目に説明
+- どう直したのかを説明
+- 直ってると判断できる理由 (テストケースの意味) を説明
 
 ---
 # 良いデスクリプション
@@ -320,15 +312,10 @@ middleman
 - デスクリプションを書いていく中でより良い修正案が浮かぶ場合もある
 
 ---
-# 例
+# デスクリプション補足
 
-gulp-ejs or es6-promise
-
----
-# デスクリプション
-
-- 作者が何かを錯覚していたり、過去の実装を忘れている場合がある
-- 過去のコミットにリファレンスしたりしつつ、その作者に理解してもらえるようにさらに詳しく説明する必要がある (場合もある)
+- 作者が何かを[錯覚していたり](https://github.com/stefanpenner/es6-promise/pull/85#r25996389)、[過去の実装を忘れている場合](https://github.com/rogeriopvl/gulp-ejs/pull/58#r73145185)がある
+- 過去のコミットにリファレンスしたりしつつ、そのメンテナに理解してもらえるようにさらに詳しく説明する必要がある (場合もある)
 
 ---
 class: center, middle, inverse
@@ -337,18 +324,19 @@ class: center, middle, inverse
 # メンテナ居ない問題
 
 ---
+class: center
 # メンテナが *居ない* とは
 
 ---
+class: center
 # メンテナが *居ない* とは
-
-{SS}
+<img src="assets/glob-prs.png" width="600" align="center" />
 
 ---
 # メンテナが *居ない* とは
-- 1年以上 issue にほぼメンテナが現れていないようなレポ
-- たまに現れるがちょっとした更新 + ver up だけのレポ
-- 結構多い
+- 1年以上 issue にほぼメンテナが現れていないような PJ
+- たまに現れるがちょっとした更新だけで issue を処理しない PJ
+- **結構多い**
 
 ---
 class: inverse, middle, center
@@ -357,8 +345,8 @@ class: inverse, middle, center
 ---
 # メンテナが *居ない* 場合
 
-- どうしようもない
-- PR を出すと**時間**の無駄になる
+- **どうしようもない**
+- PR を出すと**時間の無駄**になる
   - 基本的に **そっ閉じ** するしかない
 
 ---
@@ -383,14 +371,12 @@ class: middle, center, inverse
 - Lint をチェック
 - テストを書く
 - コミットメッセージをチェック
-- デスクリプションをチェック
+- デスクリプションを書く
 - メンテナがいるかチェック
 
 ---
 class: middle, center, inverse
 # Good Luck on your next PR!
-
-
 
 ---
 class: center, middle
@@ -406,7 +392,7 @@ class: center, middle
 
 ---
 class: center, middle, inverse
-# Node 学園祭 2017
+# 東京 Node 学園祭 2017
 # "Code and Learn" コーナー
 
 ---
@@ -424,13 +410,15 @@ class: center, middle
 
 ---
 class: center, middle
-# 東京 Node 学園祭 2017
-11/25, **11/26**
+### 東京 Node 学園祭 2017
+# 11/25, **11/26**
+
+※ Code and Learn は2日目です
+
+---
+class: center, middle, inverse
+# Be a contributer ✨
 
 ---
 class: center, middle
-### ✨🐢🚀✨
-
----
-class: center, middle
-## ご静聴ありがとうございました
+## ご静聴ありがとうございました 👏
