@@ -8,6 +8,7 @@ class: center, middle, inverse
 <img src="assets/hino.jpg" width="300" align="right" />
 
 - ひのさわ よしや
+- **フリーランスエンジニア**
 - github: **@kt3k**
 - twitter: **@kt3k**
 - qiita: **@kt3k**
@@ -30,7 +31,7 @@ class: center, middle, inverse
 - 2012 -> 2014 **GREE**
 - 2015 -> 2017 フリーランス
   - 主なパートナ: **Recruit**さん **CureApp**さん
-- ↑ ざっくりまとめると全部 Web のお仕事
+- ↑ ほぼだいたい Web の仕事
 
 ---
 class: center
@@ -55,22 +56,34 @@ class: center
 
 ---
 class: center, middle, inverse
+# 😎
+---
+class: center, middle, inverse
 # JavaScript OSS Contribution Guide
 
 ---
-# Agenda
+class: center, middle, inverse
+# Pull Request 出してますか? ✋
 
-- OSS に PR を出すときのチェックポイント
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+---
+# Pull Request (PR) とは
+- 公開されているソフトウェアに**差分**を送りつけ**取り込んでくれと要求**する行為
+- OSS に貢献するといった場合は通常は **Pull Request** を送ることで貢献する
 
 ---
 # Pull Request (PR)
 - OSS に PR を出す時、いろいろな**摩擦**が生じうる
 - PR を送る上で様々な**お作法**が存在しそれを守ることでマージされやすい PR になったり、マージしづらい PR になったりする
+
+---
+# Agenda
+
+- OSS に PR を出すときに個人的に気をつけているチェックポイントの紹介
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 
 ---
 class: center, middle, inverse
@@ -143,27 +156,27 @@ jslint:
 ---
 # もし Lint が壊れていたら
 
-## [Sails](https://github.com/balderdashy/sails/pull/3380)
+## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380)
 - 修正を提案してみた
 
 ---
 # もし Lint が壊れていたら
 
-## [Sails](https://github.com/balderdashy/sails/pull/3380)
+## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380)
 - 修正を提案してみた
 - No thanks!
 <img src="assets/sails-pr.png" width="700" align="center" />
 
 ---
-# もし Lint が壊れていたら
+# もし Lint が壊れていたら 2
 
-## [SVGO](https://github.com/svg/svgo/pull/382)
+## [SVGO に出した PR](https://github.com/svg/svgo/pull/382)
 - 修正を提案してみた
 
 ---
-# もし Lint が壊れていたら
+# もし Lint が壊れていたら 2
 
-## [SVGO](https://github.com/svg/svgo/pull/382)
+## [SVGO に出した PR](https://github.com/svg/svgo/pull/382)
 - 修正を提案してみた
 - No thanks!
 <img src="assets/svgo-pr.png" width="700" align="center" />
@@ -203,11 +216,11 @@ class: center, middle, inverse
 
 ---
 # バグのテストの例
-## [SCEditor](https://github.com/samclarke/SCEditor/pull/533)
+## [SCEditor に出した PR](https://github.com/samclarke/SCEditor/pull/533)
 
 ---
 # バグのテストの例
-## [SCEditor](https://github.com/samclarke/SCEditor/pull/533)
+## [SCEditor に出した PR](https://github.com/samclarke/SCEditor/pull/533)
 - SCEditor はあまりアクティブにはメンテされていない
 - パーサの実装もかなり自由な感じで、作者は実装を覚えていないはず
 - 既存及び追加分のテストが通っていることを持ってマージしたと思われる
@@ -233,8 +246,8 @@ class: center, middle, inverse
 
 - コミットメッセージにルールがあるレポジトリが増えてきている
   - ex. ESLint, node.js, angular, babel etc
-- 標準ルール的なものは(多分)ない
-- とりあえず最新10コミット程度眺めてルールがありそうかどうかを察する
+- **標準ルール**的なものは(多分)**ない**
+- とりあえず**最新10コミット程度眺めて**ルールがありそうかどうかを**察する**
 
 ---
 # Nodejs のルール
@@ -301,10 +314,10 @@ class: center, middle, inverse
 
 ---
 # 例
-## [SCEditor (前掲)](https://github.com/samclarke/SCEditor/pull/533)
+## [SCEditor に出した PR (前掲)](https://github.com/samclarke/SCEditor/pull/533)
 - なぜバグなのかを詳し目に説明
 - どう直したのかを説明
-- 直ってると判断できる理由 (テストケースの意味) を説明
+- 直ってると判断できる理由 (テスト) を説明
 
 ---
 # 良いデスクリプション
@@ -314,14 +327,19 @@ class: center, middle, inverse
 ---
 # デスクリプション補足
 
-- 作者が何かを[錯覚していたり](https://github.com/stefanpenner/es6-promise/pull/85#r25996389)、[過去の実装を忘れている場合](https://github.com/rogeriopvl/gulp-ejs/pull/58#r73145185)がある
-- 過去のコミットにリファレンスしたりしつつ、そのメンテナに理解してもらえるようにさらに詳しく説明する必要がある (場合もある)
+- 作者が何かを[錯覚していたり](https://github.com/stefanpenner/es6-promise/pull/85#r25996389)、[過去の経緯を忘れている場合](https://github.com/rogeriopvl/gulp-ejs/pull/58#r73145185)がある
+- サンプルを作ったり、過去のコミットにリファレンスしたりしつつ、そのメンテナに理解してもらえるようにさらに詳しく説明する必要がある (場合もある)
 
 ---
 class: center, middle, inverse
 # チェックポイントその5/5
 
-# メンテナ居ない問題
+# 　
+---
+class: center, middle, inverse
+# チェックポイントその5/5
+
+# メンテナ居ない問題 👻
 
 ---
 class: center
@@ -364,14 +382,14 @@ class: inverse, middle, center
 
 ---
 class: middle, center, inverse
-# ちゃんと引き継ぎましょう 😇
+# ちゃんと引き継いで欲しい 😇
 
 ---
 # PR チェックポイントまとめ
 - Lint をチェック
 - テストを書く
 - コミットメッセージをチェック
-- デスクリプションを書く
+- デスクリプションをていねいに書く
 - メンテナがいるかチェック
 
 ---
