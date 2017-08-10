@@ -31,7 +31,7 @@ class: center, middle, inverse
 - 2012 -> 2014 **GREE**
 - 2015 -> 2017 フリーランス
   - 主なパートナ: **Recruit**さん **CureApp**さん
-- ↑ ほぼだいたい Web の仕事
+- ↑ だいたい Web の仕事
 
 ---
 class: center
@@ -67,7 +67,7 @@ class: center, middle, inverse
 
 ---
 # Pull Request (PR) とは
-- 公開されているソフトウェアに**差分**を送りつけ**取り込んでくれと要求**する行為
+- 公開されているソフトウェアに**差分**を送りつけ**取り込みを要求**する行為
 - OSS に貢献するといった場合は通常は **Pull Request** を送ることで貢献する
 
 ---
@@ -78,7 +78,7 @@ class: center, middle, inverse
 ---
 # Agenda
 
-- OSS に PR を出すときに個人的に気をつけているチェックポイントの紹介
+- JS の OSS に PR を出すときに個人的に気をつけているチェックポイントの紹介
   - 1
   - 2
   - 3
@@ -103,83 +103,53 @@ class: center, middle, inverse
 - どうやってリントしてるかを読み取る
   - CLI を直接叩くパターン
   - タスクランナーから起動するパターン
-  - (例. grunt, gulp etc)
 
 ---
-# 例1 Vuejs (package.json)
+# Lint 設定が書かれている可能性のあるファイル
 
-```
-{
-  ...,
-  "scripts": {
-    ...,
-    "lint": "eslint src build test",
-    ...
-  }
-}
-```
-
-- package.json の run script で書くパターン
-- 一番分かりやすい (npm run lint で実行)
+- **package.json** (9割以上のレポジトリ)
+- **Gruntfile.js** (jquery 等)
+- **gulpfile.js** (フロント系)
+- **Makefile** (node, mocha 等)
 
 ---
-# 例2 Grunt (Gruntfile.js)
+# Lint ツールの種類
 
-```
-grunt.initConfig({
-  ...
-  eslint: {
-    gruntfile_tasks: ['Gruntfile.js', 'internal-tasks/*.js'],
-    libs_n_tests: ['lib/**/*.js', '<%= nodeunit.all %>'],
-    subgrunt: ['<%= subgrunt.all %>']
-  }
-  ...
-})
-```
-- ↑ grunt eslint で実行できる
-- ちょっと古めのフロント系 module で多い
+- **ESLint**, **JSHint**, JSCS, JSLint
+- **Standard**, XO
 
 ---
-# 例3 Nodejs (Makefile)
-
-```
-jslint:
-	@echo "Running JS linter..."
-	$(NODE) tools/eslint/bin/eslint.js --cache --rulesdir=tools/eslint-rules --ext=.js,.md \
-	benchmark doc lib test tools
-```
-
-- ↑ make jslint で実行できる
-- node 黎明期からあるような PJ で多い
-  - ex. mocha
+# Lint の意味
+- Lint を守ることで余計なレビュー指摘を減らすことができる
+- PR を出す方も出される方もハッピー
 
 ---
 # もし Lint が壊れていたら
 
-## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380)
+## [SVGO に出した PR](https://github.com/svg/svgo/pull/382/files)
 - 修正を提案してみた
 
 ---
 # もし Lint が壊れていたら
 
-## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380)
-- 修正を提案してみた
-- No thanks!
-<img src="assets/sails-pr.png" width="700" align="center" />
-
----
-# もし Lint が壊れていたら 2
-
-## [SVGO に出した PR](https://github.com/svg/svgo/pull/382)
-- 修正を提案してみた
-
----
-# もし Lint が壊れていたら 2
-
-## [SVGO に出した PR](https://github.com/svg/svgo/pull/382)
+## [SVGO に出した PR](https://github.com/svg/svgo/pull/382/files)
 - 修正を提案してみた
 - No thanks!
 <img src="assets/svgo-pr.png" width="700" align="center" />
+
+---
+# もし Lint が壊れていたら 2
+
+## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380/files)
+- 修正を提案してみた
+
+---
+# もし Lint が壊れていたら 2
+
+## [Sails に出した PR](https://github.com/balderdashy/sails/pull/3380/files)
+- 修正を提案してみた
+- No thanks!
+<img src="assets/sails-pr.png" width="700" align="center" />
 
 ---
 # Lint の例外
@@ -187,6 +157,11 @@ jslint:
 - Lint に興味がないコミュニティもある
   - 文化を尊重してそっとしておこう 😉
 
+---
+class: center, middle, inverse
+# チェックポイントその2/5
+
+# 　
 ---
 class: center, middle, inverse
 # チェックポイントその2/5
@@ -216,11 +191,11 @@ class: center, middle, inverse
 
 ---
 # バグのテストの例
-## [SCEditor に出した PR](https://github.com/samclarke/SCEditor/pull/533)
+## [SCEditor](http://www.sceditor.com/) に出した [PR](https://github.com/samclarke/SCEditor/pull/533)
 
 ---
 # バグのテストの例
-## [SCEditor に出した PR](https://github.com/samclarke/SCEditor/pull/533)
+## [SCEditor](http://www.sceditor.com/) に出した [PR](https://github.com/samclarke/SCEditor/pull/533)
 - SCEditor はあまりアクティブにはメンテされていない
 - パーサの実装もかなり自由な感じで、作者は実装を覚えていないはず
 - 既存及び追加分のテストが通っていることを持ってマージしたと思われる
@@ -228,7 +203,7 @@ class: center, middle, inverse
 ---
 # テスト
 - テストを書くことで非常に細かい粒度で何を修正しているのかをメンテナに対して示すことができる
-- 作者の熱量が下がっていて、もう実装を覚えていない場合でもマージされる可能性が高くなる
+- メンテナが PJ から遠ざかっていて、あまり実装を覚えていない場合でもマージされる可能性が高くなる
 
 ---
 class: center, middle, inverse
